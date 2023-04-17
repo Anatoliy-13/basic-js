@@ -14,6 +14,22 @@ const { NotImplementedError } = require('../extensions/index.js');
 function deleteDigit(/* n */) {
   throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
+  const arrOfNumbers = Array.from(String(n)).map((num) => Number(num));
+  let maxValue = 0;
+
+  arrOfNumbers.forEach((_, i) => {
+    let slicedArr = [...arrOfNumbers];
+    slicedArr.splice(i, 1);
+    let number = Number(slicedArr.join(""));
+
+    if (number < maxValue) {
+      maxValue = maxValue;
+    } else {
+      maxValue = number;
+    }
+  });
+
+  return maxValue;
 }
 
 module.exports = {
