@@ -20,7 +20,6 @@ function countCats( matrix ) {
   let arr = matrix.flat().filter((e) => e === "^^");
   return arr.length;
 
-  console.log('  result indexes -', columnsWithZeroIdx);
 
 }
 
